@@ -25,7 +25,7 @@ services:
        - "3306:3306"
      environment:
        MYSQL_DATABASE: laravel
-       MYSQL_ROOT_PASSWORD:
+       MYSQL_ROOT_PASSWORD: 123
   # Application Service
   app:
     container_name: blog
@@ -44,8 +44,6 @@ services:
      container_name: phpmyadmin
      ports:
        - "3400:80"
-     depends_on:
-       - db
 #  pgadmin:
 #    image: dpage/pgadmin4
 #    container_name: pgAdmin
