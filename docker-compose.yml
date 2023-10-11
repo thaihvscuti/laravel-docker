@@ -6,8 +6,8 @@ services:
     working_dir: /var/www
     entrypoint: [ "npm" ]
     volumes:
-      - "./www/:/var/www"
-    command: bash -c "npm install && npm run dev"
+      - ./src:/var/www
+    command: bash -c "npm run dev"
   # Web Server Service
   nginx:
     image: nginx:alpine
@@ -28,7 +28,7 @@ services:
      volumes:
        - ./mysql/data:/var/lib/mysql
      ports:
-       - "3306:3306"
+       - "3307:3306"
      environment:
        MYSQL_DATABASE: laravel
        MYSQL_ROOT_PASSWORD: 123

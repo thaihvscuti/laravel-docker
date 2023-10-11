@@ -16,7 +16,11 @@ Setting up Laravel in the local environment with Docker using the LEMP stack tha
 3. Copy ```.env.example``` to ```.env```
 4. ```docker-compose build```
 5. ```docker compose up -d```
-6. You can see the project on ```127.0.0.1:8080```
+6. ```docker-compose run --rm npm install```
+7. ```docker-compose run --rm npm install```
+8. ```docker-compose run --rm npm run dev```
+9. ```docker-compose run --rm npm run build```
+10. You can see the project on ```127.0.0.1:8080```
 
 ## How to use MySQL as a database
 
