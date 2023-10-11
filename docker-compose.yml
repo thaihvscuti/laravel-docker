@@ -7,7 +7,6 @@ services:
     entrypoint: [ "npm" ]
     volumes:
       - ./src:/var/www
-    command: bash -c "npm run dev"
   # Web Server Service
   nginx:
     image: nginx:alpine
